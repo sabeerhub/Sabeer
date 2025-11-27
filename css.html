@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Skill</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- THEME SWITCH -->
+<button id="theme-toggle" class="theme-toggle">
+  <i class="fas fa-moon"></i>
+</button>
+
+<section class="skill-section">
+  <div class="skill-card css-card">
+
+    <h1 class="skill-title">
+      <span style="color: blue;">CSS</span>
+      <div class="stars">★★★★☆</div>
+    </h1>
+
+    <img src="/img/css.png" class="skill-img" alt="CSS logo">
+
+    <p class="skill-desc">
+      CSS allows me to bring designs to life through responsive layouts, smooth animations, and clean styling.
+      I use Flexbox, Grid, media queries, modern UI patterns, and reusable style principles to create visually appealing interfaces.
+      My focus is on beautiful design, accessibility, and consistency across all device sizes.
+    </p>
+
+    <a href="/html/index.html" class="back-btn">Back to Portfolio</a>
+
+  </div>
+</section>
+
+<script>
+  const toggleBtn = document.getElementById("theme-toggle");
+  const icon = toggleBtn.querySelector("i");
+  
+  toggleBtn.onclick = () => {
+    document.body.classList.toggle("light");
+
+    if (document.body.classList.contains("light")) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+    } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+    }
+  };
+</script>
+
+</body>
+</html>

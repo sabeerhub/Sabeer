@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Skill</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- THEME TOGGLE BUTTON -->
+<button id="theme-toggle" class="theme-toggle">
+  <i class="fas fa-moon"></i>
+</button>
+
+<section class="skill-section">
+  <div class="skill-card js-card">
+
+    <h1 class="skill-title">
+      <span style="color: gold;">JavaScript</span>
+      <div class="stars">★★☆☆☆</div>
+    </h1>
+
+    <img src="/img/JavaScript.png" class="skill-img" alt="JavaScript Logo">
+
+    <p class="skill-desc">
+      JavaScript allows me to create dynamic, interactive, and intelligent web experiences.
+      I use it for DOM manipulation, API integration, animations, real-time data updates,
+      responsive logic, and building complete application functionality.
+      It is the driving engine behind every interactive feature in my projects.
+    </p>
+
+    <a href="/html/index.html" class="back-btn">Back to Portfolio</a>
+
+  </div>
+</section>
+
+<script>
+  const toggleBtn = document.getElementById("theme-toggle");
+  const icon = toggleBtn.querySelector("i");
+
+  toggleBtn.onclick = () => {
+    document.body.classList.toggle("light");
+
+    if (document.body.classList.contains("light")) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+    } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+    }
+  };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>React Skill</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<button id="theme-toggle" class="theme-toggle">
+  <i class="fas fa-moon"></i>
+</button>
+
+<section class="skill-section">
+  <div class="skill-card react-card">
+
+    <h1 class="skill-title">
+      <span>React</span>
+      <div class="stars">★★☆☆☆</div>
+    </h1>
+
+    <img src="/img/react.png" class="skill-img" alt="React Logo">
+
+    <p class="skill-desc">
+      With React, I build fast, scalable, and component-based user interfaces.
+      I use hooks, props, state management, reusable components, and modular architecture
+      to create smooth and efficient front-end applications.
+      React helps me deliver clean UI logic and high-performance user experiences.
+    </p>
+
+    <a href="/html/index.html" class="back-btn">Back to Portfolio</a>
+
+  </div>
+</section>
+
+<script>
+  const toggleBtn = document.getElementById("theme-toggle");
+  const icon = toggleBtn.querySelector("i");
+
+  toggleBtn.onclick = () => {
+    document.body.classList.toggle("light");
+
+    if (document.body.classList.contains("light")) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+    } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+    }
+  };
+</script>
+
+</body>
+</html>
